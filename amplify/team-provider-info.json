@@ -38,12 +38,6 @@
     "categories": {
       "auth": {
         "awssecuritydemof9dc6e34": {}
-      },
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d3ix1ql6xvm71v",
-          "type": "manual"
-        }
       }
     }
   }
