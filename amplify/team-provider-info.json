@@ -10,6 +10,41 @@
       "StackName": "amplify-awssecuritydemo-dev-152632",
       "StackId": "arn:aws:cloudformation:ap-south-1:861795228948:stack/amplify-awssecuritydemo-dev-152632/c8c0e160-5b05-11eb-b904-02091768d690",
       "AmplifyAppId": "d3ix1ql6xvm71v"
+    },
+    "categories": {
+      "auth": {
+        "awssecuritydemof9dc6e34": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3ix1ql6xvm71v",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awssecuritydemo-test-162520-authRole",
+      "UnauthRoleArn": "arn:aws:iam::861795228948:role/amplify-awssecuritydemo-test-162520-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::861795228948:role/amplify-awssecuritydemo-test-162520-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-awssecuritydemo-test-162520-deployment",
+      "UnauthRoleName": "amplify-awssecuritydemo-test-162520-unauthRole",
+      "StackName": "amplify-awssecuritydemo-test-162520",
+      "StackId": "arn:aws:cloudformation:ap-south-1:861795228948:stack/amplify-awssecuritydemo-test-162520/0e353590-5b0e-11eb-91c7-026340761334",
+      "AmplifyAppId": "d3ix1ql6xvm71v"
+    },
+    "categories": {
+      "auth": {
+        "awssecuritydemof9dc6e34": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3ix1ql6xvm71v",
+          "type": "manual"
+        }
+      }
     }
   }
 }

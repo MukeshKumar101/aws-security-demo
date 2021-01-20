@@ -10,8 +10,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import Amplify, { Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
+import Amplify from 'aws-amplify';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
+import awsconfig from '../aws-exports';
 Amplify.configure(awsconfig);
 
 @NgModule({
@@ -22,7 +23,13 @@ Amplify.configure(awsconfig);
     LoginComponent,
     RegisterComponent,
   ],
-  imports: [BrowserModule, AppRouting, HttpClientModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRouting,
+    HttpClientModule,
+    ReactiveFormsModule,
+    AmplifyUIAngularModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
