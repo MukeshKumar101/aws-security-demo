@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import Amplify from 'aws-amplify';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import awsconfig from '../aws-exports';
+import { OtpComponent } from './auth/otp/otp.component';
 Amplify.configure(awsconfig);
 
 @NgModule({
@@ -22,6 +23,7 @@ Amplify.configure(awsconfig);
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    OtpComponent,
   ],
   imports: [
     BrowserModule,

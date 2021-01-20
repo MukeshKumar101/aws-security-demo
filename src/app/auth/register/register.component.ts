@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from './../../service/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
-  userForm: FormGroup;
+  constructor(private auth: AuthService) {}
 
-  constructor() {}
+  @Output() userDataEmitter = new EventEmitter<{
+    username: string;
+    userConfirmed: boolean;
+  }>();
+  userForm: FormGroup;
 
   ngOnInit(): void {
     let username: string = '';
@@ -25,6 +30,11 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegister() {
-    console.log('registered');
+    this.auth.onSignupUser({ ...this.userForm.value }).then((user) => {
+      this.userDataEmitter.emit({
+        username: user.getUsername(),
+        userConfirmed: true,
+      });
+    });
   }
 }

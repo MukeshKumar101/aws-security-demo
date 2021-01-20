@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-group">
+        <input type="text" class="form-control" #otp placeholder="Enter the pin"/>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div
+        class="btn btn-block btn-primary"
+        type="button"
+        (click)="onConfirmOtp(otp.value)"
+      >
+        Confirm
+      </div>
+    </div>
+  </div>
+</div>
